@@ -1,0 +1,10 @@
+<h1>Hello</h1>
+
+
+
+<% @books.each do |book| %>
+   <h1> <%= book.title %></h2>
+  <p><%= link_to 'View',book_path(book)%></p>
+
+
+   <% end %>
