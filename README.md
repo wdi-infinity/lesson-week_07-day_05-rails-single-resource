@@ -80,7 +80,7 @@ Follow the steps outlined in good Error Driven Development
     - Test the route, ensure actions are successful
     - Use Rails Console to ensure all data persists as expected
 
-### CRUD
+### CRUD for Books
 
 We'll now go through the steps for completing each CRUD action for multiple
 resources.
@@ -145,6 +145,28 @@ Let's add an author to our application.
 </table>
 
 Follow the same Error Driven Development steps as you did with books!
+
+### CRUD for Author
+
+#### Read - index
+
+- `AuthorsController#index`
+
+#### Read - show
+
+- `AuthorsController#show`
+
+#### Destroy
+
+- `AuthorsController#destroy`
+
+#### Update
+
+- `AuthorsController#update`
+
+#### Create
+
+- `AuthorsController#create`
 
 ## Tasks
 
