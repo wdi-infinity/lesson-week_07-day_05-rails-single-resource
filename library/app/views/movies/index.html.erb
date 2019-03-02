@@ -1,0 +1,8 @@
+<h2> Movies List </h2>
+<% @movies.each do |movie| %>
+    <h2> <%= movie.director %> </h2>
+    <h2> <%= movie.title %> </h2>
+    <h2> <%= movie.rating %> </h2>
+    <p> <%= link_to 'View Movie' , movie_path(movie) %></p>
+
+    <% end %>

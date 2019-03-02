@@ -1,0 +1,11 @@
+<h1> hello </h1>
+<%=
+# if we want to wirte Ruby style 
+# we should add it between 
+  %> 
+
+<% @books.each do |book| %>
+   <h2> <%= book.title %> </h2>
+   <p> <%= link_to 'View Book' , book_path(book) %></p>
+
+   <% end %>
