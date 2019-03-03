@@ -1,0 +1,24 @@
+
+<h1> Edit Movie </h1>
+
+<%= form_for @movie, local: true do |form| %>
+    <p><%= link_to 'back', movies_path %></p>
+    
+
+     <p> Enter movie title
+     <%= form.text_field :title %>
+    </p>
+
+    <p> Enter movie director
+     <%= form.text_field :director %>
+    </p>
+
+     <p> Enter movie rating
+     <%= form.text_field :rating %>
+    </p>
+
+    <p> 
+    <%= form.submit %>
+    </p>
+    
+<% end %>
