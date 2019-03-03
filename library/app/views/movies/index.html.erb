@@ -1,0 +1,9 @@
+<h1> HI ALYA</h1>
+
+
+<% @movies.each do |movie|%>
+
+<h2><%= movie.director %></h2>
+<p><%= link_to 'view', movie_path(movie)%></p>
+
+<%end%>
