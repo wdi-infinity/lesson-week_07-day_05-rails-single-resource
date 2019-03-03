@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 #  post '/books' => "books#create"
 #  patch '/books/:id' => 'books#update'
 #  delete '/books/:id' => "books#destroy"
-resources :books
+#resources :books
  
 
 # get '/movies' => "movies#index"
@@ -20,12 +20,14 @@ resources :books
 # patch '/movies/:id' => 'movies#update'
 # delete '/movies/:id' => "movies#destroy"
 
-resources :movies
+#resources :movies
 
 
 
-
-get '/ingredients' => "ingredients#index"
-get '/ingredients/:id'=> "ingredients#show", as: 'ingredient'
+# get '/ingredients' => "ingredients#index"
+# get '/ingredients/:id'=> "ingredients#show", as: 'ingredient'
+# end
+resources :articles do
+resources :comments
 end
-
+end
