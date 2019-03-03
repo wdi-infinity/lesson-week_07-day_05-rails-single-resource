@@ -1,0 +1,22 @@
+
+<h1> Hi </h1>
+
+<p> <%= link_to 'View', new_book_path %></p>
+
+<% @books.each do |book| %> 
+
+<h2> <%= book.title %> </h2> 
+<p> <%= link_to 'View', book_path(book) %></p>
+<p> <%= link_to 'Edit', edit_book_path(book) %></p>
+
+
+
+
+<p> <%= link_to 'delete', 
+book_path(book), 
+method: :delete ,
+data: {confirm: "are you sure "}
+%></p>
+
+
+<% end %> 
