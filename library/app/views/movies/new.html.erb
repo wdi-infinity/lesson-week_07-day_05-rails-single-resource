@@ -1,0 +1,18 @@
+<h1> Create a new movie</h1>
+
+<p><%= link_to 'create new movie', movies_path %></p>
+
+<%= form_with scope: :movie, url:'/movies', local: true do|form|%>
+<p>
+<%= form.text_field :title %>
+</p>
+<p>
+<%= form.text_field :dirctor %>
+</p>
+<p>
+<%= form.text_field :rating %>
+</p>
+<p>
+<%= form.submit %>
+</p>
+<%end%>
