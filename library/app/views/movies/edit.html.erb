@@ -1,0 +1,17 @@
+<h1> Edit a Movie </h1>
+<p> <%= link_to 'Go to the list', movies_path %></p>
+# local true wont create the AJAX request 
+<%= form_for @movie , local: true do |form| %>
+    <p>
+        <%= form.text_field :title %>
+    </p>
+    <p>
+         <%= form.text_field :director %>
+</p>
+<p>
+<%= form.text_field :rating %>
+</p>
+<p>
+     <%= form.submit %>
+</p>
+<% end %>
