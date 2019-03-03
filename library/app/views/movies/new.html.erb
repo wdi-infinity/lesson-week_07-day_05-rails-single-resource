@@ -1,0 +1,22 @@
+<h1> Create a new movie </h1>
+
+
+<%= form_with scope: :movie, url: '/movies', local: true do |form| %>
+    <h3> The title</h3>
+    <p>
+    <%= form.text_field :title %>
+    </p>
+     <h3> Director</h3>
+       <p>
+    <%= form.text_field :director %>
+    </p>
+    <h3> Rating</h3>
+        <p>
+    <%= form.number_field :rating %>
+    </p>
+
+       <p>
+    <%= form.submit %>
+    </p>
+
+    <% end %>
