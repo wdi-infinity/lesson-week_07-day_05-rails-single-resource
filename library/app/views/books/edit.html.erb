@@ -1,0 +1,17 @@
+<h1> Edit book </h1>
+
+<%= form_for @book, local: true do |form| %>
+    <p><%= link_to 'back', books_path %></p>
+    <p>
+     <%= form.text_field :title %>
+    </p>
+
+     <p> 
+     <%= form.text_field :author %>
+    </p>
+
+    <p> 
+    <%= form.submit %>
+    </p>
+    
+<% end %>

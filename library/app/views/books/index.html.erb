@@ -1,0 +1,18 @@
+<h1>HELLO</h1>
+
+
+
+<p><%= link_to 'create new book', new_book_path %></p>
+
+
+ <% @books.each do |book| %>
+
+<h3><%= book.title %></h3>
+<p><%= link_to 'View', book_path(book) %> </p>
+<p><%= link_to 'Edit', edit_book_path(book) %> </p>
+<p><%= link_to 'Delete',
+ book_path(book),
+ method: :delete, 
+ data: {confirm: 'Are you sure you want to delete this movie?'}%></p>
+<%end%>
+
