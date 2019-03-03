@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  
+resources :articles do
+  resources :comments
+end
+  resources :paintings
   # get '/books' => 'books#index', as: 'books' #books_path
   #  get '/books/new' => "books#new", as:'new_book'
   # get '/books/:id/edit' => "books#edit", as:'edit_book'
