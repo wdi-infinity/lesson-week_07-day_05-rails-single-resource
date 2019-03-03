@@ -1,0 +1,16 @@
+
+
+<h1><%= @ingredient.name %></h1>
+<ul>
+<li><%= @ingredient.unit %></li>
+<li><%= @ingredient.amount %></li>
+<li><%= @ingredient.purchased_on %></li>
+<% if @ingredient.is_rotten %>
+ <li><%= "rottened" %></li>
+<% else %>
+<li><%= "not rottened yet" %></li>
+<% end %>
+</ul>
+
+<p> <%= link_to 'View All Ingredients', ingredients_path %></p>
+

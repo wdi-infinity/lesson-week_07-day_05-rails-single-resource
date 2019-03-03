@@ -38,6 +38,16 @@ ActiveRecord::Schema.define(version: 2019_03_03_133712) do
     t.index ["article_id"], name: "index_comments_on_article_id"
   end
 
+  create_table "ingredients", force: :cascade do |t|
+    t.string "name"
+    t.string "unit"
+    t.integer "amount"
+    t.date "purchased_on"
+    t.boolean "is_rotten"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "movies", force: :cascade do |t|
     t.string "director"
     t.string "title"
