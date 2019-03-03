@@ -1,11 +1,15 @@
 <h1> Movies List</h1>
 
+<p> <%= link_to 'Create new Movie', new_movie_path %> </p>
+
 <% @movies.each do |movie| %>
 
     <h2> Director: <%= movie.director %> </h2>
     <h2> Title: <%= movie.title %> </h2>
     <h2> Rating: <%= movie.rating %> </h2>
     <p> <%= link_to 'View', movie_path(movie) %> </p>
+    <p> <%= link_to 'Delete', movie_path(movie), method: :delete, data: { confirm: "Are you sure you want to delete?"} %> </p>
+    <p> <%= link_to 'Edit', edit_movie_path(movie) %> </p>
 
     <% end %>
 
