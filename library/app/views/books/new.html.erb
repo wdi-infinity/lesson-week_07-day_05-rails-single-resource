@@ -1,0 +1,14 @@
+<h1>Create new books</h1>
+<p> <%=link_to 'Back to all books', books_path %></p>
+
+<%= form_with scope: :book, url: '/books', local: true do |form|%>
+    <p>
+        <%= form.text_field :title %>
+    </p>
+    <p>
+        <%= form.text_field :author %>
+    </p>
+    <p>
+        <%= form.submit %>
+    </p>
+<% end %>
