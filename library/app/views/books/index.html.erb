@@ -1,6 +1,11 @@
-<h1>Hello</h1>
+<h1>*** Hello ***</h1>
+
+<h2> <%= link_to "add new book",  new_book_path %></h2>
 <% @books.each do |book|  %>
     <h2> <%= book.title %> </h2>
     <p><%= link_to 'view' , book_path(book)%></p>
+    
+    <p><%= link_to 'Delete', book_path(book), method: :delete, 
+    data: {confirm:"Are you sur"}%></p>
 <%end%>
 
