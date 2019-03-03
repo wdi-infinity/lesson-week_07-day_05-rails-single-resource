@@ -14,9 +14,21 @@ class BooksController < ApplicationController
     end
 
     def new
+     
 
     end
-
+    def edit
+      @book = Book.find(params[:id]) 
+    
+    end
+    def update
+      @book = Book.find(params[:id]) 
+      if @book.update(books_params)
+        redirect_to books_path
+      else
+        render 'edit'
+      end
+    end
     def create
     # Book.createparams[:book] #create new book
       @book = Book.new(books_params) #create new instance but it is not saves into the database (it like a copy)
