@@ -1,6 +1,11 @@
 <h1>The Movies </h1>
 
+<p> <%= link_to 'Create new movie', new_movie_path %></p>
+
 <% @movies.each do |movie| %>
     <h2> <%= movie.title %> </h2>
-<p> <%= link_to 'View Book' , movie_path(movie) %></p>
+<p> <%= link_to 'View Movie' , movie_path(movie) %></p>
+<p> <%= link_to 'Updata Movie' , edit_movie_path(movie) %></p>
+<p> <%= link_to 'Delete' , movie_path(movie), method: :delete,
+data: {confirm: "Are you sure you want to delete ? "} %></p>
 <% end %>
