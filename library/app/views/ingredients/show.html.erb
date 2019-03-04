@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ingredient.name %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @ingredient.unit %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @ingredient.amount %>
+</p>
+
+<p>
+  <strong>Purchased on:</strong>
+  <%= @ingredient.purchased_on %>
+</p>
+
+<p>
+  <strong>Is rotten:</strong>
+  <%= @ingredient.is_rotten %>
+</p>
+
+<%= link_to 'Edit', edit_ingredient_path(@ingredient) %> |
+<%= link_to 'Back', ingredients_path %>
