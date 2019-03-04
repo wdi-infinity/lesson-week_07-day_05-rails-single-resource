@@ -10,5 +10,11 @@
   <%= @painting.artist %>
 </p>
 
+<p>
+  <strong>Picture:</strong>
+  <img src =<%= @painting.paint %>
+</p>
+
+
 <%= link_to 'Edit', edit_painting_path(@painting) %> |
 <%= link_to 'Back', paintings_path %>

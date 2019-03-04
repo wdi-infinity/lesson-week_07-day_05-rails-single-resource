@@ -7,6 +7,7 @@
     <tr>
       <th>Title</th>
       <th>Artist</th>
+      <th>Picture</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
       <tr>
         <td><%= painting.title %></td>
         <td><%= painting.artist %></td>
+        td><%= painting.paint %></td>
         <td><%= link_to 'Show', painting %></td>
         <td><%= link_to 'Edit', edit_painting_path(painting) %></td>
         <td><%= link_to 'Destroy', painting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
