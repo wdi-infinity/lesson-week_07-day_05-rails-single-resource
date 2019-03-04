@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+/* @import 'movies.scss' */
+
+@import 'paintings.scss'

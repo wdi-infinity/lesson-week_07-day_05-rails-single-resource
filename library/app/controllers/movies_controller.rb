@@ -32,6 +32,6 @@ def index
         end
     end
     def movie_params
-            params.require(:movie).permit(:director, :title , :rating)
+            params.require(:movie).permit(:director, :title )
         end
 end

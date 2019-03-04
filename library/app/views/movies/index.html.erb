@@ -1,9 +1,8 @@
 <h2> Movies List </h2>
 <p> <%= link_to 'Create new Movies' , new_movie_path %></p>
 <% @movies.each do |movie| %>
-    <h2> <%= movie.director %> </h2>
-    <h2> <%= movie.title %> </h2>
-    <h2> <%= movie.rating %> </h2>
+    <h2> Director <%= movie.director %> </h2>
+    <h2> Title <%= movie.title %> </h2>
     <p> <%= link_to 'View Movie' , movie_path(movie) %></p>
     <p> <%= link_to 'Updata Movie' , edit_movie_path(movie) %></p>
     <p> <%= link_to 'Delete Movie' , movie_path(movie),

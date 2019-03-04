@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
-  resources :articles
-
+root 'welcome#index'
+  get 'welcome/index'
+  get 'reviews/create'
+  get 'reviews/destroy'
 resources :articles do
   resources :comments
+end
+resources :movies do
+  resources :reviews
 end
   resources :paintings
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -20,13 +25,13 @@ end
 resources :books
 # ##############################################
 
-get '/movies' =>"movies#index",as:'movies'
-get '/movies/new' => "movies#new" ,as: 'new_movie'
-post '/movies' => "movies#create"
-get '/movies/:id/edit' => "movies#edit",as:'edit_movie'
-patch '/movies/:id' => "movies#update"
-get '/movies/:id' =>"movies#show",as:'movie'
-delete '/movies/:id' =>"movies#destroy" 
+# get '/movies' =>"movies#index",as:'movies'
+# get '/movies/new' => "movies#new" ,as: 'new_movie'
+# post '/movies' => "movies#create"
+# get '/movies/:id/edit' => "movies#edit",as:'edit_movie'
+# patch '/movies/:id' => "movies#update"
+# get '/movies/:id' =>"movies#show",as:'movie'
+# delete '/movies/:id' =>"movies#destroy" 
 
 ########################################
 
