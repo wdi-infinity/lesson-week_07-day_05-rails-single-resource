@@ -1,0 +1,9 @@
+<h1>Ingredients 🍿</h1>
+<% @ingredients.each do |ingredient|  %>
+    <h2> <%= ingredient.name %> </h2>
+    <h2> <%= ingredient.unit %> </h2>
+    <h2> <%= ingredient.amount %> </h2>
+    <h2> <%= ingredient.purchased_on %> </h2>
+    <h2> <%= ingredient.is_rotten %> </h2>
+    <p> <%= link_to 'View' , ingredient_path(ingredient) %></p>
+    <% end %>
