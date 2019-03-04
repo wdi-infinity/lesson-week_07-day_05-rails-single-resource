@@ -1,0 +1,18 @@
+
+
+<p> <%= link_to 'Create new book', new_book_path %></p>
+
+<% @books.each do |book| %>
+
+   <% if  book.title != "" %>
+        <h2><%= book.title %></h2>
+        <p><%= link_to 'View ', book_path(book) %></p>
+        <p><%= link_to 'Edit ', edit_book_path(book) %></p>
+        <p><%= link_to 'delete', 
+        book_path(book), 
+        method: :delete,
+        data: { confirm:'Are you sure?'} %></p>
+    <% end %>
+<%end%>
+
+
