@@ -1,0 +1,31 @@
+// Place all the styles related to the paintings controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// .field{
+//     border: 6px solid transparent;
+//  border-image: linear-gradient(to right, #f9c7cf 0%, #12776f 100%);
+//  border-image-slice: 1;
+//  background: #e7f5f2;
+//  color: #0f4137;
+// }
+
+.input{
+border: 6px solid transparent;
+ border-image: linear-gradient(to right, #c6cfff 0%, #e8d3ff 100%);
+ border-image-slice: 1;
+ background: #f3f8ff;
+ color: #0f4137;
+}
+body{
+background: #f3f8ff;
+color: grey;
+}
+.create_post{
+    border: 6px solid transparent;
+  border-image: linear-gradient(to right, #c6cfff 0%, #e8d3ff 100%);
+  border-image-slice: 1;
+  background: #fff;
+  color: #000;
+background: #f3f8ff;
+}
+
