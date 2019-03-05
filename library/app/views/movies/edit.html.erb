@@ -1,0 +1,19 @@
+<h1>Edit a New Movie</h1>
+
+<h3> <%= link_to "Back to all Movies",  movies_path %></h3>
+
+<%= form_for @movie, local: true do |form| %>
+   <p> 
+   <%= form.text_field :director %>
+    </p>
+
+    <p>
+    <%= form.text_field :title%>
+    </p>
+
+    <p>
+    <%= form.submit %>
+    </p>
+    
+    <% end %>
+   
