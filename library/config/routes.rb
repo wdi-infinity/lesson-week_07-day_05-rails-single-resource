@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
+  
+  get 'welcome/index' 
+
+  root 'welcome#index'
+  # which --> route will be main bage
+
   # resources :articles
   resources :articles do
     resources :comments
   end
-  # resources :paintings
+
+  resources :paintings
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # get '/books' => "books#index", as: 'books'
   # # first named router the books is controller and the index is method inside books controller 
@@ -23,7 +31,10 @@ Rails.application.routes.draw do
   # post '/movies' => "movies#create"
   # patch '/movies/:id'=> "movies#update"
   # delete '/movies/:id'=>"movies#destroy"
-  resources :movies
+  resources :movies do
+    resources :reviews
+  end
+  # nested routes
   # ingredients
   # get '/ingredients' => "ingredients#index", as:'ingredients'
   # get '/ingredients/:id' => "ingredients#show", as:'ingredient'

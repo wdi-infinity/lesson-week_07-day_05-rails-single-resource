@@ -10,5 +10,11 @@
   <%= @painting.artist %>
 </p>
 
+<p>
+   <strong>Url:</strong>
+   <%= image_tag(@painting.url)%>
+</p>
+
+
 <%= link_to 'Edit', edit_painting_path(@painting) %> |
 <%= link_to 'Back', paintings_path %>

@@ -1,9 +1,36 @@
 <h1>Hello ***</h1>
 
+<p> <%= link_to 'View all movies', movies_path %></p>
+
 <ul>
     <li><%= @movie.director %></li>
     <li><%= @movie.title %></li>
-    <li><%= @movie.rating %></li>
+   
 </ul>
+   
+<p>
+<% @movie.reviews.each do |review| %>
+    <p>reviewer: <%= review.reviewer%></p>
+    <p>review: <%= review.body%></p>
+    <p>rating:  <%= review.rating%></p>
+    <% end %>
+</p>
 
-<p> <%= link_to 'View all movies', movies_path %></p>
+<%= form_with(model: [@movie, @movie.reviews.build], local: true) do |form| %>
+    <p>
+      <%= form.label :reviewer %><br>
+      <%= form.text_field :reviewer %>
+    </p>
+    <p>
+      <%= form.label :body %><br>
+      <%= form.text_area :body %>
+    </p>
+    <p>
+      <%= form.label :rating %><br>
+      <%= form.number_field :rating %>
+    </p>
+    <p>
+      <%= form.submit %>
+    </p>
+ 
+  <% end %>

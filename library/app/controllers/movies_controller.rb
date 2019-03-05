@@ -34,7 +34,7 @@ class MoviesController < ApplicationController
     end
 
     def movie_params
-      params.require(:movie).permit(:director, :title, :rating)
+      params.require(:movie).permit(:director, :title)
     end
 
     def destroy
@@ -45,4 +45,5 @@ class MoviesController < ApplicationController
       render action: "new"
     end
   end
+  
 end
