@@ -1,10 +1,35 @@
-<h1>Hello</h1>
+<p id=“notice”><%= notice %></p>
+
+<h1>Movies</h1>
+
+<table>
+ <thead>
+   <tr>
+     <th>Title</th>
+     <th>Director</th>
+     <th colspan=“3"></th>
+   </tr>
+ </thead>
 
 
 
-<% @movies.each do |movie| %>
-   <h1> <%= movie.title %></h2>
-  <p><%= link_to 'View Details',movie_path(movie)%></p>
+ <tbody>
+   <% @movies.each do |movie| %>
+     <tr>
+       <td><%= movie.title %></td>
+       <td><%= movie.director %></td>
 
+       <td><%= link_to 'Show', movie_path(movie)%></td>
+       <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
+      <td><%= link_to 'Destroy', movie_path(movie),
+      method: :delete,
+      data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+     
+  <% end %>
+ </tbody>
+</table>
 
-   <% end %>
+<br>
+
+<%= link_to 'New Movie', new_movie_path %>

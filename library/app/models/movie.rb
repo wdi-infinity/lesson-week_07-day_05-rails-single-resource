@@ -1,3 +1,5 @@
-class Movie<ApplicationRecord
 
-end 
+class Movie < ApplicationRecord
+    has_many :reviews,dependent: :destroy
+
+end
