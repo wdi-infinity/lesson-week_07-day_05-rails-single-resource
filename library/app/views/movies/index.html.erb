@@ -1,0 +1,12 @@
+<h1> HI ALYA</h1>
+<p><%= link_to 'create new movie', new_movie_path%></p>
+
+
+<% @movies.each do |movie|%>
+
+<h2><%= movie.director %></h2>
+<p><%= link_to 'view', movie_path(movie)%></p>
+<p><%= link_to 'edit', edit_movie_path(movie) %></p>
+<p><%= link_to 'delete', movie_path(movie), method: :delete, data: {confirm: 'are you sure you want to delete'} %></p>
+
+<%end%>

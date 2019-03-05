@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @painting.title %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @painting.artist %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <img src =<%= @painting.paint %>
+</p>
+
+
+<%= link_to 'Edit', edit_painting_path(@painting) %> |
+<%= link_to 'Back', paintings_path %>

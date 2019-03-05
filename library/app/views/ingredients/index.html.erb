@@ -1,0 +1,8 @@
+<h1> HI ALYA</h1>
+
+<% @ingredients.each do |ingredient|%>
+
+<h2><%= ingredient.name %></h2>
+<p><%= link_to 'view', ingredient_path(ingredient)%></p>
+
+<%end%>
